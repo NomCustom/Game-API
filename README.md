@@ -1,5 +1,5 @@
 # Game-API
-La seule et unique API REST de jeux française !
+La seule et unique API REST d'infos jeux française !
 
 ### Mais comment utiliser l'API ?
 

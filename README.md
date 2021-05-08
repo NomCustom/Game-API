@@ -66,11 +66,17 @@ GET /api/games/(id)/short_desc
 ```python
 import requests
 
-url = "
+r = requests.get("https://game-api.jgame.repl.co/api/games/1")
+print(r)
 
-'''
-Expected outputs: 
-{
 
-}
+#Expected outputs: 
+#{
+# 'id':1,
+# 'creators': 'creators',
+# 'type': 'type', 
+# 'name': 'name',
+# 'short_desc': 'short description',
+# 'long_desc': 'long description'
+#}
 '''

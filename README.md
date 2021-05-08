@@ -4,6 +4,7 @@ La seule et unique API REST de jeux française !
 ### Mais comment utiliser l'API ?
 
 C'est simple ! Vous aurez plusieurs exemples ici:
+Tu veux le lien ? [Clique ici !](https://game-api.jgame.repl.co)
 
 **Obtenir tout les jeux disponibles dans l'API**
 

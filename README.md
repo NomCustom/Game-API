@@ -68,7 +68,8 @@ import requests
 
 r = requests.get("https://game-api.jgame.repl.co/api/games/1")
 print(r)
-
+data = r.json()
+print(data['name'])
 
 #Expected outputs: 
 #{

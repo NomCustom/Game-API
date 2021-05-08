@@ -81,4 +81,17 @@ print(data['name'])
 # 'short_desc': 'short description',
 # 'long_desc': 'long description'
 #}
+
+# Asynchronous method:
+import aiohttp
+import asyncio
+
+async def game_api():
+   async with aiohttp.ClientSession() as session:
+           url = "https://game-api.jgame.repl.co/api/games/1'
+           async with session.get(pokemon_url) as resp:
+                       data = await resp.json()
+                       print(data['name'])
+
+asyncio.run(game_api())
 ```

@@ -3,28 +3,16 @@ from functools import wraps
 import jwt
 from datetime import datetime
 import datetime
+import os
+import json
+
+fetch_path = os.getcwd()
+path = fetch_path.replace("\\", "/")
 
 app = Flask("Game API")
-jeux_liste = [
-	{
-		"id": 0,
-		"type": "action",
-		"creators": "InnerSloth",
-		"name": "Among Us",
-		"short_desc": "Jouez en ligne ou sur wi-fi local avec 4-10 joueurs que vous essayez de préparer votre vaisseau spatial pour le départ, mais méfiez-vous que l’on sera un imposteur plié sur tuer tout le monde!",
-		"long_desc": "Les membres d'équipage peuvent gagner en complétant toutes les tâches ou en découvrant et en votant l'imposteur à bord du navire. L’Imposteur peut utiliser le sabotage pour provoquer le chaos, en facilitant la mort et en améliorant les alibis."
-	},
-	
-	{
-		"id": 1,
-		"type": "aventure", 
-		"creators": "Roblox Corporation", 
-		"name": "Roblox",
-		"short_desc": "Une des plus grandes plateformes au monde de jeux créés par la communauté.",
-		"long_desc": "Roblox est l'univers virtuel ultime qui vous permet de jouer, de créer et d'incarner tout ce dont vous rêvez. Rejoignez des millions de joueurs et découvrez d'innombrables mondes immersifs créés par une communauté internationale ! Vous avez déjà un compte ? Connectez-vous à votre compte Roblox et jouez dès maintenant ! DES MILLIONS DE MONDES À EXPLORER \nVous avez envie de jouer à un RPG épique ? Vous rêvez d'affronter des joueurs du monde entier ? Ou vous voulez juste passer du temps avec vos amis en ligne ? Grâce à la multitude de mondes créés régulièrement par la communauté, vous aurez sans arrêt des univers à découvrir. \nJOUEZ ENSEMBLE OÙ ET QUAND VOUS VOULEZ\nJouez où vous voulez. Roblox est multi-plateformes : vous pouvez jouer avec vos amis et des millions d'autres joueurs sur ordinateur, appareil mobile, Xbox One et casque de réalité virtuelle. \nDEVENEZ QUI VOUS VOULEZ \nFaites preuve de créativité et démarquez-vous ! Personnalisez votre avatar avec des tonnes de chapeaux, t-shirts, visages, objets, etc. Grâce au catalogue d'objets qui grandit chaque jour, votre originalité n'a pas de limite.\nDISCUTEZ AVEC VOS AMIS\nPassez du temps avec des amis du monde entier grâce au chat, aux messages privés et aux groupes !"
-	}
-]
 
+with open(path + '/games.json') as data:
+    jeux_liste = json.load(data)
 
 @app.route("/")
 def api_home():

@@ -118,7 +118,7 @@ func main() {
    sb := string(body)
    log.Printf(sb)
 }
-\* Expected outputs:
+/* Expected outputs:
 {
  'id':1,
  'creators': 'creators',

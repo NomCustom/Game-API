@@ -129,3 +129,39 @@ func main() {
 }
 */
 ```
+
+**Javascript**
+```js
+const Http = new XMLHttpRequest();
+
+const url='https://game-api.jgame.repl.co/api/games/1';
+
+Http.open("GET", url);
+
+Http.send();
+
+Http.onreadystatechange = (e) => {
+
+  console.log(Http.responseText)
+
+}
+
+/* Expected outputs:
+
+{
+
+ 'id':1,
+
+ 'creators': 'creators',
+
+ 'type': 'type',
+
+ 'name': 'name',
+
+ 'short_desc': 'short description',
+
+ 'long_desc': 'long description'
+
+}
+*/
+```
